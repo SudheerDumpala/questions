@@ -40,5 +40,6 @@ public class primenumber {
                 System.out.println(j+ " ");
             }
         }
+        input.close();
     }
 }
