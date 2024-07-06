@@ -1,4 +1,4 @@
-// TO check the given number is Strong number ir not //
+// TO check the given number is Strong number or not //
 
 /* Strong number: A number is said to be Strong number if all the sum of the 
     Factorial of the digits in the number is equals to the number itself */
