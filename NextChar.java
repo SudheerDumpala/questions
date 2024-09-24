@@ -8,11 +8,26 @@ public class NextChar {
         String name = input.nextLine();
         String result = "";
         for(int i=0;i<name.length();i++){
-            char temp = name.charAt(i);
-            temp++;
-            result+= temp;
+            char currentChar = name.charAt(i);
+            char nextChar = getNextChar(currentChar);
+            result += nextChar;
         }
         System.out.println("The next character of the characters given in the input are: "+result);
         input.close();
     }
+        
+        private static char getNextChar(char ch){
+            if(ch == 'Z'){
+                return 'A';
+            }
+            else if(ch == 'z'){
+                return 'a';
+            }
+            else if(Character.isLetter(ch)){
+                return (char) (ch+1);
+            }
+            else{
+                return ch;
+            }
+        }
 }
