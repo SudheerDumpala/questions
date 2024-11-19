@@ -5,21 +5,29 @@ public class Anagram {
         if(s1.length() != s2.length()){
             return false;
         }
-        else{
+        /*else{
             s1 = s1.toLowerCase();
             s2 = s2.toLowerCase();
             char Arr1[] = s1.toCharArray();
             char Arr2[] = s2.toCharArray();
-            for(char c:Arr1){
-                System.out.println(c);
-            }
             Arrays.sort(Arr1);
-            for(char c:Arr1){
-                System.out.println(c);
-            }
             Arrays.sort(Arr2);
             return Arrays.equals(Arr1,Arr2);
-        }
+        }*/
+        else{
+            s1 = s1.toLowerCase();
+            s2 = s2.toLowerCase();
+         for (int i = 0; i < s1.length(); i++) {
+            char x = a.charAt(i);
+            int count1 = 0, count2 = 0;
+
+            for (int j = 0; j < s1.length(); j++) {
+                if (x == s1.charAt(j)) count1++;
+                if (x == s2.charAt(j)) count2++;
+            }
+
+            if (count1 != count2) return false;
+         }
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
